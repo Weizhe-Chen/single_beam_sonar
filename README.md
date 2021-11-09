@@ -16,7 +16,6 @@
 3. Install `ping-python` to read the sonar data
   ```bash
   conda activate ros
-  # 
   pip install bluerobotics-ping
   ```
 4. Build the package
@@ -54,3 +53,13 @@
    ```
 
    ![](./media/sonar_rostopic.png)
+
+9. (Optional) I've added the following lines in the `~/.bashrc` file of the on-board computer to activate the `Noetic` virtual environment and catkin workspace whenever we open a terminal
+
+   ```bash
+   # vim ~/.bashrc
+   conda activate ros
+   source ~/sonar_ws/devel/setup.bash
+   ```
+
+   
