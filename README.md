@@ -1,4 +1,18 @@
 # ROS Driver of The Single Beam Sonar from BlueRobotics
+We need access permission of the `ttyUSB` port to communicate with the sensor. To check whether we have the access, run the following command
+
+```bash
+groups | grep tty
+```
+
+If we can see `tty` in red, we can proceed to the next step. Otherwise, add the current user to the tty group.
+
+```bash
+sudo usermod -a -G tty $USER
+```
+
+Log out and log back in to verify whether we are in the `tty` group now.
+
 `bluerobotics-ping` requires Python3. We create the `ROS Noetic` virtual environment in Conda so that this package can be used on Ubuntu 16.04/18.04 as well. 
 
 1. Install `Miniconda`: https://docs.conda.io/en/latest/miniconda.html
